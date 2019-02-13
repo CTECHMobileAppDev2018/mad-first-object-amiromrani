@@ -31,8 +31,7 @@ public class Player {
   // here is where you should insert your setHealth and getHealth methods
   // what are some conditions that need to be checked?
   public void setHealth (int inputH) {
-    if (inputH.health()  > 100 ) {
-    this.health = "invalid";
+    if (inputH > 100 ) {
     return;
     }
   this.health=inputH;
