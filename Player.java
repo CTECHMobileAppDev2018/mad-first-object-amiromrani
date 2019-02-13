@@ -7,21 +7,20 @@ public class Player {
   private int health;
   
   // this is called a "constructor". It is automatically called when someone creates a new Player object
-  public void Player() {
+  Player() {
     this.health = 100;
   }
   
   // next we have "setters" and "getters"
   // these allow us to set and get properties, including doing some error checking
-  public void setName(String playerName) { 
+  public void setName(String input) { 
 
     // first let's make sure the length of the name is longer than 0
-    if (playerName.length() < 1) {
+    if (input.length() < 1) {
       this.name = "invalid";
       return;
     }
-    
-    this.name = playerName;
+    this.name=input;
   }
   
   // this just gets the name 
@@ -31,5 +30,16 @@ public class Player {
   
   // here is where you should insert your setHealth and getHealth methods
   // what are some conditions that need to be checked?
-  
+  public void setHealth (int inputH) {
+    if (inputH.health()  > 100 ) {
+    this.health = "invalid";
+    return;
+    }
+  this.health=inputH;
+    
+}
+   public int getHealth() {
+    return this.health;
+  }
+
 }
